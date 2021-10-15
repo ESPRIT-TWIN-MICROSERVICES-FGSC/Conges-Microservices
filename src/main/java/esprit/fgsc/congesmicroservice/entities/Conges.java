@@ -1,10 +1,14 @@
 package esprit.fgsc.congesmicroservice.entities;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
 
 @Document
 public class Conges {
 
+@Id
+private String id;
 private String employeId;
 private String start_date;
 private String end_date;
@@ -32,6 +36,12 @@ public String getType() {
 }
 public void setType(String type) {
 	this.type = type;
+}
+public String getId() {
+	return id;
+}
+public void setId(String id) {
+	this.id = id;
 }
 
 
