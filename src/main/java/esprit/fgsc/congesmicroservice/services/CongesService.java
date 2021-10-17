@@ -50,7 +50,7 @@ public Conges updateConge(String id,Conges newConge) {
 	        String end_date = sdf.format(date1);
 	        existingConges.setEnd_date(end_date);
 		
-		return congesRepository.save(newConge);
+		return congesRepository.save(existingConges);
 		
 	}else {
 		return null;
