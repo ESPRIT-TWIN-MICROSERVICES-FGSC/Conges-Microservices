@@ -39,6 +39,8 @@ public Conges updateConge(String id,Conges newConge) {
 		existingConges.setType(newConge.getType());
 		 existingConges.setStart_date(newConge.getStartDate());
 	        existingConges.setEnd_date(newConge.getEndDate());
+		 existingConges.setFirstName(newConge.getFirstName());
+		 existingConges.setLastName(newConge.getLastName());
 		return congesRepository.save(existingConges);
 		
 	}else {
