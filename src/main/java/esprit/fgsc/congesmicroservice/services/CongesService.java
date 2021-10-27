@@ -33,10 +33,10 @@ public class CongesService {
 		 return congesRepository.findAll();
 	}
 	
-	public String deleteConge(String id) {   
+	public void deleteConge(String id) {   
 
 		congesRepository.deleteById(id);
-   	return "conge deleted"+id;
+   	
 	}
           
 public Conges updateConge(String id,Conges newConge) {
