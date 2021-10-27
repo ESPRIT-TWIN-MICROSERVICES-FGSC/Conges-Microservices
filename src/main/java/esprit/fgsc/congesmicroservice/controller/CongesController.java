@@ -42,7 +42,7 @@ public class CongesController {
 	
 	@DeleteMapping("/delete/{id}")
 	public void deleteConges(@PathVariable String id) {
-	    return congesService.deleteConge(id);
+	     congesService.deleteConge(id);
 	}
 
 	@PutMapping(value="/update/{id}")
