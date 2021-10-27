@@ -10,6 +10,8 @@ public class Conges {
 @Id
 private String id;
 private String employeId;
+private String firstName;
+private String lastName;
 private String start_date;
 private String end_date;
 private String type;
@@ -42,6 +44,18 @@ public String getId() {
 }
 public void setId(String id) {
 	this.id = id;
+}
+public String getFirstName() {
+	return firstName;
+}
+public void setFirstName(String firstName) {
+	this.firstName = firstName;
+}
+public String getLastName() {
+	return lastName;
+}
+public void setLastName(String lastName) {
+	this.lastName = lastName;
 }
 
 
