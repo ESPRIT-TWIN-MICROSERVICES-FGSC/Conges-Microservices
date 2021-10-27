@@ -37,13 +37,8 @@ public Conges updateConge(String id,Conges newConge) {
 	if(congesRepository.findById(id).isPresent()) {
 		Conges existingConges = congesRepository.findById(id).get();
 		existingConges.setType(newConge.getType());
-		Date date = new Date();
-		 String start_date = sdf.format(date);
-		 existingConges.setStart_date(start_date);
-			Date date1 = new Date();
-	        String end_date = sdf.format(date1);
-	        existingConges.setEnd_date(end_date);
-		
+		 existingConges.setStart_date(newConge.getStartDate());
+	        existingConges.setEnd_date(newConge.getEndDate());
 		return congesRepository.save(existingConges);
 		
 	}else {
