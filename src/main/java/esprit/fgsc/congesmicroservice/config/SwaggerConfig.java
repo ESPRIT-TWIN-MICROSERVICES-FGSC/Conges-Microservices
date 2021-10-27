@@ -25,7 +25,7 @@ public class SwaggerConfig {
     }
     public static ApiInfo metadata(){
         return new ApiInfoBuilder()
-                .title("Client microservice")
+                .title("Leaves microservice")
                 .description("A microservice for show leaves for employees")
                 .contact(new Contact("Firas Belhiba", "https://github.com/firasbelhiba","mohamedfiras.belhiba@esprit.tn"))
                 .version("0.1")
