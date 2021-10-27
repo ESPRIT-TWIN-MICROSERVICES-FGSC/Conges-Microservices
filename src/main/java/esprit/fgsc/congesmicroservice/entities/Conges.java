@@ -12,6 +12,8 @@ private String id;
 private String employeId;
 private String start_date;
 private String end_date;
+private String firstName;
+private String lastName;
 private String type;
 public String getEmployeId() {
 	return employeId;
@@ -42,6 +44,12 @@ public String getId() {
 }
 public void setId(String id) {
 	this.id = id;
+}
+public String getLastName() {
+	return lastName;
+}
+public void setLastName(String lastName) {
+	this.lastName = lastName;
 }
 
 
