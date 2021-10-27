@@ -14,8 +14,6 @@ private String firstName;
 private String lastName;
 private String start_date;
 private String end_date;
-private String firstName;
-private String lastName;
 private String type;
 public String getEmployeId() {
 	return employeId;
