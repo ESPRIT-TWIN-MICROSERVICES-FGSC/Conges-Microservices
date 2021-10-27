@@ -20,12 +20,6 @@ public class CongesService {
 	private ICongesRepository congesRepository;
 	
 	public Conges addConges(Conges conge) {
-		Date date = new Date();
-        String start_date = sdf.format(date);
-		conge.setStart_date(start_date);
-		Date date1 = new Date();
-        String end_date = sdf.format(date1);
-        conge.setEnd_date(end_date);
 		return congesRepository.save(conge);
 		
 	}
