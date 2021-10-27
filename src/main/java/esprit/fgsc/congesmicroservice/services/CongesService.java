@@ -20,12 +20,6 @@ public class CongesService {
 	private ICongesRepository congesRepository;
 	
 	public Conges addConges(Conges conge) {
-		Date date = new Date();
-        String start_date = sdf.format(date);
-		conge.setStart_date(start_date);
-		Date date1 = new Date();
-        String end_date = sdf.format(date1);
-        conge.setEnd_date(end_date);
 		return congesRepository.save(conge);
 		
 	}
@@ -33,23 +27,20 @@ public class CongesService {
 		 return congesRepository.findAll();
 	}
 	
-	public String deleteConge(String id) {   
+	public void deleteConge(String id) {   
 
 		congesRepository.deleteById(id);
-   	return "conge deleted"+id;
+   	
 	}
           
 public Conges updateConge(String id,Conges newConge) {
 	if(congesRepository.findById(id).isPresent()) {
 		Conges existingConges = congesRepository.findById(id).get();
 		existingConges.setType(newConge.getType());
-		Date date = new Date();
-		 String start_date = sdf.format(date);
-		 existingConges.setStart_date(start_date);
-			Date date1 = new Date();
-	        String end_date = sdf.format(date1);
-	        existingConges.setEnd_date(end_date);
-		
+		 existingConges.setStart_date(newConge.getStartDate());
+	        existingConges.setEnd_date(newConge.getEndDate());
+		 existingConges.setFirstName(newConge.getFirstName());
+		 existingConges.setLastName(newConge.getLastName());
 		return congesRepository.save(existingConges);
 		
 	}else {
